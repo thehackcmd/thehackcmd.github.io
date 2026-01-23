@@ -14,14 +14,6 @@ Extracts and displays readable text content from public web pages in a clean, di
 ### Universal Media Player
 Plays media from supported platforms (YouTube, Vimeo, SoundCloud) using official embed players.
 
-## Hosting
-
-1. Upload all files to a GitHub repository
-2. Go to **Settings → Pages**
-3. Select the `main` branch
-4. Your site will be available at:
-   https://yourusername.github.io/repository-name/
-
 ## Disclaimer
 
 This project is for educational and experimental purposes only.
