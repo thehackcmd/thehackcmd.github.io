@@ -1,37 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<title>Buscador</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<h2>🔍 Buscador de páginas permitidas</h2>
-<input id="q" placeholder="Buscar página...">
-<button onclick="search()">Buscar</button>
-
-<ul id="results"></ul>
+<h2>🔍 Páginas permitidas</h2>
+<input id="q"><button onclick="go()">Buscar</button>
+<ul id="r"></ul>
 
 <script>
-fetch("sites.json")
-  .then(r => r.json())
-  .then(data => window.sites = data);
-
-function search(){
-  const q = document.getElementById("q").value.toLowerCase();
-  const ul = document.getElementById("results");
-  ul.innerHTML = "";
-  window.sites
-    .filter(s => s.name.toLowerCase().includes(q))
-    .forEach(s => {
-      const li = document.createElement("li");
-      li.innerHTML = `<a href="${s.url}" target="_blank">${s.name}</a>`;
-      ul.appendChild(li);
-    });
+fetch("sites.json").then(r=>r.json()).then(d=>s=d);
+function go(){
+  r.innerHTML="";
+  s.filter(x=>x.name.toLowerCase().includes(q.value.toLowerCase()))
+   .forEach(x=>r.innerHTML+=`<li><a target=_blank href="${x.url}">${x.name}</a></li>`);
 }
 </script>
-
-</body>
-</html>
