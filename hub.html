@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>TheHackCmd</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+if(localStorage.getItem("auth")!=="1") location.href="index.html";
+</script>
+
+<h1>TheHackCmd</h1>
+<p>Hub de herramientas unblocked</p>
+
+<div class="grid">
+  <a href="search.html">🔍 Buscador unblocked</a>
+  <a href="calculator.html">🧮 Calculadora</a>
+  <a href="password.html">🔐 Contraseñas</a>
+  <a href="base64.html">🔁 Base64</a>
+  <a href="pomodoro.html">⏱️ Pomodoro</a>
+  <a href="notes.html">📝 Notas</a>
+</div>
+
+<button onclick="logout()">Salir</button>
+
+<footer>Hecho por thehackcmd</footer>
+
+<script>
+function logout(){
+  localStorage.removeItem("auth");
+  location.href="index.html";
+}
+</script>
+
+</body>
+</html>
