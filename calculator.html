@@ -5,9 +5,9 @@
 <title>Calculadora</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-body {
-  background:white;
-  color:black;
+body{
+  background:#fff;
+  color:#000;
   font-family:Arial;
   display:flex;
   flex-direction:column;
@@ -15,30 +15,38 @@ body {
   justify-content:center;
   height:100vh;
 }
-input, button {
-  font-size:20px;
+input,button{
+  font-size:22px;
   padding:10px;
   margin:5px;
+  width:220px;
 }
 </style>
 </head>
 <body>
 
 <h2>Calculadora</h2>
-<input id="calc" placeholder="2+2">
+<input id="d" placeholder="0">
 <button onclick="calc()">=</button>
-<p id="res"></p>
 
 <script>
 function calc(){
-  document.getElementById("res").textContent =
-    eval(document.getElementById("calc").value);
+  // código secreto
+  if(d.value === "1337"){
+    location.href="hub.html";
+    return;
+  }
+  try{
+    d.value = eval(d.value);
+  }catch{
+    d.value = "Error";
+  }
 }
 
-// Atajo secreto para volver
-document.addEventListener("keydown", e => {
-  if(e.ctrlKey && e.key === "h"){
-    location.href = "index.html";
+// atajo secreto
+document.addEventListener("keydown",e=>{
+  if(e.ctrlKey && e.altKey && e.key==="h"){
+    location.href="hub.html";
   }
 });
 </script>
