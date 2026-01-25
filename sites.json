@@ -1,0 +1,12 @@
+[
+  { "name": "Wikipedia", "url": "https://es.wikipedia.org" },
+  { "name": "Archive.org", "url": "https://archive.org" },
+  { "name": "W3Schools", "url": "https://www.w3schools.com" },
+  { "name": "MDN Web Docs", "url": "https://developer.mozilla.org" },
+  { "name": "Khan Academy", "url": "https://www.khanacademy.org" },
+  { "name": "Desmos", "url": "https://www.desmos.com/calculator" },
+  { "name": "GeoGebra", "url": "https://www.geogebra.org" },
+  { "name": "CodePen", "url": "https://codepen.io" },
+  { "name": "GitHub Pages", "url": "https://pages.github.com" },
+  { "name": "Stack Overflow", "url": "https://stackoverflow.com" }
+]
