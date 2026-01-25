@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Calculadora</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  background:white;
+  color:black;
+  font-family:Arial;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+}
+input, button {
+  font-size:20px;
+  padding:10px;
+  margin:5px;
+}
+</style>
+</head>
+<body>
+
+<h2>Calculadora</h2>
+<input id="calc" placeholder="2+2">
+<button onclick="calc()">=</button>
+<p id="res"></p>
+
+<script>
+function calc(){
+  document.getElementById("res").textContent =
+    eval(document.getElementById("calc").value);
+}
+
+// Atajo secreto para volver
+document.addEventListener("keydown", e => {
+  if(e.ctrlKey && e.key === "h"){
+    location.href = "index.html";
+  }
+});
+</script>
+
+</body>
+</html>
