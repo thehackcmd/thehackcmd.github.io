@@ -1,0 +1,10 @@
+<h2>Pomodoro</h2>
+<p id="t">25:00</p>
+<button onclick="start()">Start</button>
+<script>
+let s=1500,i;
+function start(){
+  clearInterval(i);
+  i=setInterval(()=>{s--;t.textContent=`${s/60|0}:${("0"+s%60).slice(-2)}`},1000);
+}
+</script>
