@@ -2,40 +2,30 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>TheHackCmd</title>
+<title>Calculadora</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="manifest" href="manifest.json">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- BLOQUEO -->
-<div id="lock">
-  <h2>🔒 Acceso protegido</h2>
+<div class="login">
+  <h2>Calculadora</h2>
   <input id="pass" type="password" placeholder="Contraseña">
-  <button onclick="unlock()">Entrar</button>
-  <p id="error"></p>
+  <button onclick="login()">Entrar</button>
+  <p id="msg"></p>
 </div>
 
-<!-- APP -->
-<div id="app" style="display:none;">
-  <header>
-    <h1>TheHackCmd</h1>
-    <p>Hub de herramientas unblocked</p>
-  </header>
+<script>
+const PASSWORD = "thehackcmd";
+function login(){
+  if(pass.value === PASSWORD){
+    localStorage.setItem("auth","1");
+    location.href = "hub.html";
+  } else {
+    msg.textContent = "Contraseña incorrecta";
+  }
+}
+</script>
 
-  <div class="tools">
-    <a href="search.html">🔍 Buscador unblocked</a>
-    <a href="calculator.html">🧮 Calculadora</a>
-  </div>
-
-  <button class="lockbtn" onclick="lock()">🔒 Bloquear</button>
-
-  <footer>
-    Hecho por thehackcmd
-  </footer>
-</div>
-
-<script src="app.js"></script>
 </body>
 </html>
