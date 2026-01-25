@@ -1,5 +1,0 @@
-self.addEventListener("fetch", e => {
-  e.respondWith(
-    fetch(e.request).catch(() => caches.match("index.html"))
-  );
-});
